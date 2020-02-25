@@ -13,6 +13,13 @@ Add IMG
 ## Referências
 - https://stackoverflow.com/questions/50232557/visual-studio-code-java-extension-howto-add-jar-to-classpath
 - https://blog.usejournal.com/visual-studio-code-for-java-the-ultimate-guide-2019-8de7d2b59902
+- http://seanzhou1023.blogspot.com/2017/04/quiz-1-princeton-algorithm.html
+- https://vancexu.github.io/2015/07/21/intro-to-union-find-data-structure-exercise.html
+- https://github.com/vancexu/Algs4/blob/master/JobInterviewQuestions/1.1_union_find/WeightedQuickUnionUF.java
+- https://stackoverflow.com/questions/25799520/union-find-expressed-as-a-social-network
+- https://github.com/eschwabe/interview-practice/blob/master/coursera/algorithms-part1/union-find/SocialNetworkConnectivity.java
+- https://github.com/tiffaniechia/Algorithms-Percolation
+- 
 
 ### GIT
 - git remote add origin https://github.com/HandBoy/UnionFind-Social-Network-Connectivity.git
