@@ -1,5 +1,8 @@
 package UnionFind;
 
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,7 +28,7 @@ public class UnionFinderWeighted
 	}
 
 	public int count() {
-		return count;
+		return this.count;
 	}
 
 	private int root(int p) {
@@ -39,7 +42,7 @@ public class UnionFinderWeighted
 	public void union(int p, int q) {
 		int rootp = root(p);
         int rootq = root(q);
-        System.out.println(p + " " + q);
+
 		if (rootp == rootq) return;
 		if (this.size[rootp] < this.size[rootq]) {
 			this.usersId[rootp] = rootq;
@@ -54,6 +57,10 @@ public class UnionFinderWeighted
 	public boolean connected(int p, int q) {
 		return root(p) == root(q);
     }
+
+    public boolean allConnected() {
+        return this.count == 1;
+    }
     
     public static void main( String[] args )
     {
@@ -64,7 +71,7 @@ public class UnionFinderWeighted
             String line, datetime;
             int p, q;
             String[] expected;
-            
+
             UnionFinderWeighted uf = new UnionFinderWeighted(
                     Integer.parseInt(reader.readLine())
             );
@@ -82,24 +89,27 @@ public class UnionFinderWeighted
                 line = reader.readLine();
             }
             reader.close();
-
-            uf.print();
+            System.out.println(" All Connected: " + uf.allConnected());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*
-        StdIn.isEmpty();
-        int n = StdIn.readInt();
-        UnionFinderWeighted uf = new UnionFinderWeighted(n);
-        while (!StdIn.isEmpty()) {
-            int p = StdIn.readInt();
-            int q = StdIn.readInt();
-            if (uf.connected(p, q)) continue;
-            uf.union(p, q);
-            StdOut.println(p + " " + q);
-        }
-        StdOut.println(uf.count() + " components");
-        */
+//        System.out.println( args[0]);
+//        StdIn.isEmpty();
+//        System.out.println(("Input N"));
+//        int n = StdIn.readInt();
+//        UnionFinderWeighted uf = new UnionFinderWeighted(n);
+//        while (!StdIn.isEmpty()) {
+//            System.out.println(("Input P"));
+//            StdIn.readInt();
+//            int p = StdIn.readInt();
+//            System.out.println(("Input Q"));
+//            int q = StdIn.readInt();
+//            if (uf.connected(p, q)) continue;
+//            uf.union(p, q);
+//            StdOut.println(p + " ; " + q);
+//        }
+//        StdOut.println(uf.count() + " components");
+
     }
 
     public void print(){
